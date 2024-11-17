@@ -12,6 +12,7 @@ unsigned int page_table[] = {0x8000000c, 0x00000000, 0x00000000, 0x80000006};
 unsigned int virtual_addresses[] = {
         0x00003229, 0x00001369, 0x00001e80, 0x00002556, 0x00003a1e
 };
+//-----------------------------------gcc
 
 // convert virtual address to physical address using paging
 void translate_address(unsigned int va) {

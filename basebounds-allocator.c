@@ -1,11 +1,6 @@
-//
-// Created by Ana Goncalves on 16.11.2024.
-//
-
 #include <stdio.h>
 
 #define PHYSICAL_MEMORY_SIZE 64     // in KB
-
 
 typedef struct {
     int base;       // base address
@@ -29,6 +24,14 @@ void initialize_memory() {
 int alloc(int size) {
     int start = -1;
     int count = 0; // number of free blocks
+    int free_memory = 0;
+
+    // check if there is enough free memory
+    for (int i = 0; i < PHYSICAL_MEMORY_SIZE; i++) {
+        if (memory[i].allocated == 0) {
+            free_memory++;
+        }
+    }
 
     for (int i = 0; i < PHYSICAL_MEMORY_SIZE; i++) {
         if (memory[i].allocated == 0) {  // check if block is free
@@ -46,7 +49,7 @@ int alloc(int size) {
         }
     }
 
-    printf("Allocation of %d KB failed\n", size);
+    printf("Allocation of %d KB failed for process %d. Remaining memory: %dKB \n", size, process_counter, free_memory);
     return -1;
 }
 
@@ -66,13 +69,13 @@ void free_memory(int process_id) {
     }
 }
 
-// Main function
+
 int main() {
     initialize_memory();
 
     //----------------TEST CASES----------------
     char actions[] = {'a', 'a', 'a', 'a', 'f', 'f', 'f'};
-    int arguments[] = {12, 24, 8, 16, 1, 0, 3};
+    int arguments[] = {12, 24, 8, 128, 1, 7, 2};
     int num_actions = sizeof(actions) / sizeof(actions[0]);
     //------------------------------------------
 
