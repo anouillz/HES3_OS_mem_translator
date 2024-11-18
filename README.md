@@ -81,6 +81,7 @@ VA 0x00000007 (decimal: 7) --> SEGMENTATION VIOLATION (SEG0)
 This program implements a memory allocator using the **base and bounds** method with a choice of allocation strategies (first-fit, best-fit, worst-fit).
 
 #### Input:
+- Allocation method. Change at the top of the code. 0 - first fit, 1 - best fit, 2 worst fit.
 - List of actions (`'a'` for alloc, `'f'` for free).
 - List of arguments corresponding to the actions (size for alloc, process ID for free).
 
