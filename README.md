@@ -10,7 +10,7 @@ The project demonstrates memory management techniques such as **paging**, **segm
 
 ## Directory Structure
 ```
-<gomes>-lab5.zip
+gomes-lab5.zip
 ├── basebounds-allocator.c
 ├── mmu-pagination.c
 ├── mmu-segmentation.c
