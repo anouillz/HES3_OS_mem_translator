@@ -6,18 +6,18 @@
 #define SEGMENT_BIT 3            // needed to extract 4th bit from right
 
 //------------TEST CASES 1----------------
-
+/*
 // segment base table (in hexadecimal)
 uint32_t segment_base[] = {0x0000031, 0x00000020}; // uint32_t to store 32 bits - physical address can be large
 // segment limit table
 uint16_t segment_limit[] = {4, 5};
 // virtual address to translate (in hexadecimal)
-uint32_t virtual_addresses[] = {0x0000000c, 0x00000008, 0x00000001, 0x00000007, 0x00000000};
+uint32_t virtual_addresses[] = {0x0000000d, 0x00000008, 0x00000001, 0x00000007, 0x00000000};
 // virtual address (in decimal)
-uint32_t virtual_addresses_decimal[] = {12, 8, 1, 7, 0};
-
+uint32_t virtual_addresses_decimal[] = {13, 8, 1, 7, 0};
+*/
 //------------TEST CASES 2----------------
-/*
+
 // segment base table (in hexadecimal)
 uint32_t segment_base[] = {0x0000002d, 0x0000000d}; // uint32_t to store 32 bits - physical address can be large
 // segment limit table
@@ -26,7 +26,6 @@ uint16_t segment_limit[] = {4, 4};
 uint32_t virtual_addresses[] = {0x0000000d, 0x00000004, 0x00000000, 0x00000007, 0x00000002};
 // virtual address (in decimal)
 uint32_t virtual_addresses_decimal[] = {13, 4, 0, 7, 2};
-*/
 
 //----------------------------------------
 
